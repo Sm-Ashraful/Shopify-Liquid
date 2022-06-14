@@ -209,6 +209,15 @@
           "bg_gradient": "#e9e4f0",
           "background": "linear-gradient(180deg, rgba(168, 192, 255, 1), rgba(63, 43, 150, 1) 100%)"
         }
+      },
+      "a_custome_header": {
+        "type": "a_custome_header",
+        "settings": {
+          "bg_color": "#8f94fb",
+          "header_height": 75,
+          "logo": "shopify:\/\/shop_images\/logo_1_be81def0-5756-4e8f-aa84-b608cf83a41b.png",
+          "logo_width": 100
+        }
       }
     },
     "content_for_index": [
