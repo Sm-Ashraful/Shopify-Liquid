@@ -22,6 +22,7 @@
 {%if block.settings.announcement_text != blank %}
 <div class="mycls {% if block.settings.show_gradient%}bg-gradient{% else %} bg-solid {% endif %}">{{block.settings.announcement_text|upcase}}</div>
 {% endif %}
+
 {% endfor %}
 
 {% schema %}
@@ -69,7 +70,19 @@
                           "id": "announcement_text",
                           "label": "Announce Bar Text",
                           "default": "Welcome to store"
-                        }
+                        },
+                        {
+                          "type": "text",
+                          "id": "announcement_text2",
+                          "label": " Second Announce Bar Text",
+                          "default": "50% off"
+                      },
+                      {
+                          "type": "text",
+                          "id": "announcement_text3",
+                          "label": "Third Announce Bar Text",
+                          "default": "summer salse"
+                      }
 					]
 				}
 			]
