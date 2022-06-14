@@ -489,6 +489,7 @@ blockquote {
     height: 4rem;
     text-align: center;
     background: black;
+    color: white;
   }
 
 .caption {
