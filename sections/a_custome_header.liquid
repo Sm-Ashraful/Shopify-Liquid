@@ -13,7 +13,21 @@
 </style>
 
 <header class="my-header">
-  <div class="header-logo">{{ section.settings.logo | image_url: width: section.settings.logo_width }}</div>
+  <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+          {%- if section.settings.logo != blank -%}
+            {%- assign image_size_2x = section.settings.logo_width | times: 2 | at_most: 5760 -%}
+            <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
+              src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+              loading="lazy"
+              class="header__heading-logo"
+              width="{{ section.settings.logo.width }}"
+              height="{{ section.settings.logo.height }}"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
+          {%- else -%}
+            <span class="h2">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
   <div class="navbar">This is navbar</div>
   <div class="icon-list">
     <div class="search-bar">this is search bar</div>
