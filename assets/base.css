@@ -484,6 +484,11 @@ blockquote {
     padding-left: 1.5rem;
   }
 }
+  .announcement-bar{
+  	width: 100%;
+    height: 4rem;
+    text-align: cemter;
+  }
 
 .caption {
   font-size: 1rem;
