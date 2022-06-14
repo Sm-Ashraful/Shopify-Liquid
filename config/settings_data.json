@@ -192,8 +192,11 @@
           "de6ac7a1-a417-44e6-adce-5bf7e6906178": {
             "type": "announcement",
             "settings": {
-              "show_gradient": true,
-              "announcement_text": "Welcome to store"
+              "show_gradient": false,
+              "show_animation": false,
+              "announcement_text": "Welcome to store",
+              "announcement_text2": "50% off",
+              "announcement_text3": "summer salse"
             }
           }
         },
@@ -201,10 +204,10 @@
           "de6ac7a1-a417-44e6-adce-5bf7e6906178"
         ],
         "settings": {
-          "text_color": "#e9e4f0",
+          "text_color": "#3c3b3f",
           "bg_solid": "#8f94fb",
           "bg_gradient": "#e9e4f0",
-          "background": "linear-gradient(#a8c0ff, #3f2b96)"
+          "background": "linear-gradient(180deg, rgba(168, 192, 255, 1), rgba(63, 43, 150, 1) 100%)"
         }
       }
     },
