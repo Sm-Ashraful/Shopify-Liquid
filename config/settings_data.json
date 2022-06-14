@@ -201,10 +201,10 @@
           "de6ac7a1-a417-44e6-adce-5bf7e6906178"
         ],
         "settings": {
-          "text_color": "#d6cbcb",
-          "bg_solid": "#569f61",
-          "bg_gradient": "#161515",
-          "background": "linear-gradient(128deg, rgba(48, 100, 8, 0.57), rgba(168, 218, 205, 1) 50%, rgba(0, 0, 0, 1) 100%)"
+          "text_color": "#e9e4f0",
+          "bg_solid": "#8f94fb",
+          "bg_gradient": "#e9e4f0",
+          "background": "linear-gradient(#a8c0ff, #3f2b96)"
         }
       }
     },
