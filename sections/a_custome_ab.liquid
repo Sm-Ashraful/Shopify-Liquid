@@ -8,6 +8,21 @@
     height:5rem;
     transition: all .5s linear;
   }
+  .mychildcls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    animation: scrolling-bar 10s linear infinite;
+  }
+  @keyframes scrolling-bar{
+    0%{
+      transform: translatex(100%)
+    }
+    100%{
+      transform: translatex(-100%)
+    }
+  }
   .bg-gradient{
   	background: {{ section.settings.background }};
     color: {{ section.settings.bg_gradient }};
