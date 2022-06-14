@@ -44,22 +44,39 @@
     align-items: center;
     
   }
-  .nav-navbar{
+  .myp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
     width: 100%;
   }
-  .nav-navlist{
+  .nav-bar{
+    width: 100%;
+  }
+  .my-nav-list{
     display: flex;
     justify-content: center;
-    align-item: center;
+    align-items: center;
   }
-  .nav-singllist{
-    margin: 0 1rem;
+  .my-nav-item{
     display: inline-block;
-    
+    margin: 0 1rem;
   }
-  .nav-singllist ul li a{
+  .my-nav-item a{
     text-decoration: none;
-    text-transform: capitalize;
+    color: black;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    transition: all .5s ease;
+  }
+  .nav-bar ul li a:hover{
+    color: blue;
+  }
+   .nav-bar ul li a:active{
+    color: green;
+    text-decoration: underline;
   }
   
     
@@ -80,14 +97,20 @@
             <span class="h2">{{ shop.name }}</span>
           {% endif %}
         </a>
-  <div class="navbar">
-    <nav class="nav-navbar">
-      <ul class="nav-navlist">
-        <li class="nav-singllist"><a href="/">home</a></li>
-        <li class="nav-singllist"><a href="#">about</a></li>
-        <li class="nav-singllist"><a href="#">contact us</a></li>
+  
+  <div class='mymenu'>
+    <nav class="nav-bar">
+      <ul class="my-nav-list">
+        {% for link in section.settings.header_menu.links %}
+        {% if link.links != blank %}
+        Dropdown Menu
+        {% else %}
+        <li class="my-nav-item"><a class="{% if link.current %}active{%endif%}" href="{{link.url}}">{{link.title}}</a></li>
+        {% endif %}
+        {% endfor %}
       </ul>
     </nav>
+  
   </div>
   <div class="icon-list">
     <div class="search-bar">this is search bar</div>
