@@ -13,7 +13,7 @@
 </style>
 
 <header class="my-header">
-  <div class="header-logo">{{ section.settings.logo_image | image_url: width: 100, height: 50}}</div>
+  <div class="header-logo">{{ section.settings.logo | image_url: width: section.settings.logo_width }}</div>
   <div class="navbar">This is navbar</div>
   <div class="icon-list">
     <div class="search-bar">this is search bar</div>
