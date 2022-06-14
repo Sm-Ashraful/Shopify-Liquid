@@ -47,9 +47,8 @@
 </style>
 
 <header class="my-header">
-  <a href="{{ routes.root_url }}" class="header__heading-link link">
+  <a href="{{ routes.root_url }}" class="nav-logo">
           {% if section.settings.logo != blank %}
-            {%- assign image_size_2x = section.settings.logo_width | times: 2 | at_most: 5760 -%}
             <img srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
               src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
               loading="lazy"
@@ -62,7 +61,9 @@
             <span class="h2">{{ shop.name }}</span>
           {% endif %}
         </a>
-  <div class="navbar">This is navbar</div>
+  <div class="navbar">
+  	
+  </div>
   <div class="icon-list">
     <div class="search-bar">this is search bar</div>
     <div class="shopping-icon">this is shopping icon</div>
