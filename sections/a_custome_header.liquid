@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 75px;
+    height: {{ section.settings.header_height }};
     align-items: center;
     text-align: center;
     background: {{ section.settings.bg_color }};
@@ -31,12 +31,17 @@
              "label": "Header Background Color",
              "default": "#8f94fb"
          },
-		{
-             "type": "color",
-             "id": "text_color",
-             "label": "Header Background Color",
-             "default": "#3C3B3F"
-         }
+		 {
+              "type": "range",
+              "id": "header_height",
+              "min": 65,
+              "max": 85,
+              "step": 1,
+              "unit": "px",
+              "label": "Header Height",
+              "default": 75
+          }
+
 	]
   }
 {% endschema %}
