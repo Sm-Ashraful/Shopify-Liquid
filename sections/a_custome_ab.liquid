@@ -20,7 +20,14 @@
 
 {% for block in section.blocks %}
 {%if block.settings.announcement_text != blank %}
-<div class="mycls {% if block.settings.show_gradient%}bg-gradient{% else %} bg-solid {% endif %}">{{block.settings.announcement_text|upcase}}</div>
+<div class="mycls {% if block.settings.show_gradient%}bg-gradient{% else %} bg-solid {% endif %}">
+  
+  {{block.settings.announcement_text|upcase}}
+  {{block.settings.announcement_text2|upcase}}
+  {{block.settings.announcement_text3|upcase}}
+
+</div>
+
 {% endif %}
 
 {% endfor %}
@@ -62,6 +69,12 @@
 						{
                           "type": "checkbox",
                           "id": "show_gradient",
+                          "label": "Show Gradient Color Background",
+                          "default": false
+                        },
+						{
+                          "type": "checkbox",
+                          "id": "show_animation",
                           "label": "Show Gradient Color Background",
                           "default": false
                         },
