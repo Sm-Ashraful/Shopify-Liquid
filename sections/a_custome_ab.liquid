@@ -36,23 +36,26 @@
 
 
 {% for block in section.blocks %}
-<div class="mycls {% if block.settings.show_gradient%}bg-gradient{% else %} bg-solid {% endif %}">
-{%if block.settings.announcement_text != blank %}
-  <div class="mychildcls">
-    {{block.settings.announcement_text|upcase}}
-  </div>
- {% endif %}
-  {%if block.settings.announcement_text != blank %}
-  <div class="mychildcls">
-    {{block.settings.announcement_text2|upcase}}
-  </div>
- {% endif %}
-  {%if block.settings.announcement_text != blank %}
-  <div class="mychildcls">
-    {{block.settings.announcement_text3|upcase}}
-  </div>
-  
- {% endif %}
+<div class="mycls {% if block.settings.show_gradient %}bg-gradient {% else %} bg-solid {% endif %}">
+{% if block.settings.show_animation %}
+    {%if block.settings.announcement_text != blank %}
+    <div class="mychildcls">
+      {{block.settings.announcement_text|upcase}}
+    </div>
+   {% endif %}
+    {%if block.settings.announcement_text != blank %}
+    <div class="mychildcls">
+      {{block.settings.announcement_text2|upcase}}
+    </div>
+   {% endif %}
+    {%if block.settings.announcement_text != blank %}
+    <div class="mychildcls">
+      {{block.settings.announcement_text3|upcase}}
+    </div>
+   {% endif %}
+  {% else %}
+  {{block.settings.announcement_text|upcase}}
+{% endif %}
 </div>
 
 {% endfor %}
