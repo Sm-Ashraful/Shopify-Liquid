@@ -487,7 +487,8 @@ blockquote {
   .announcement-bar{
   	width: 100%;
     height: 4rem;
-    text-align: cemter;
+    text-align: center;
+    background: black;
   }
 
 .caption {
