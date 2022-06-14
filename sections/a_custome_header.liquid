@@ -2,7 +2,7 @@
   .my-header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     height: {{ section.settings.header_height }}px;
     align-items: center;
@@ -11,25 +11,6 @@
     color: black;
     border-radius: 5px;
   }
-  .header *[tabindex='-1']:focus {
-  outline: none;
-}
-
-.header__heading {
-  margin: 0;
-  line-height: 0;
-  margin: auto;
-}
-
-.header > .header__heading-link {
-  line-height: 0;
-}
-
-.header__heading,
-.header__heading-link {
-  grid-area: heading;
-  justify-self: center;
-}
 
 .header__heading-link {
   display: inline-block;
