@@ -6,7 +6,7 @@
     height: 75px;
     align-items: center;
     text-align: center;
-    background: black;
+    background: {{ section.settings.text_color }};
     color: white;
   }
 </style>
@@ -23,7 +23,14 @@
 {% schema %}
   {
     "name": "Custom Header",
-    "settings": []
+    "settings": [
+		{
+             "type": "color",
+             "id": "text_color",
+             "label": "Announcement Text Color",
+             "default": "#3C3B3F"
+         }
+	]
   }
 {% endschema %}
 
