@@ -1,17 +1,77 @@
-<div class='announcement-bar'>
-	{{ section.settings.c_announcemet }}
-</div>
+<style>
+  .mycls{
+  	text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .bg-gradient{
+  	background: {{ section.settings.background }};
+    color: {{ section.settings.bg_gradient }};
+  }
+  .bg-solid{
+    background: {{ section.settings.bg_solid }};
+    color: {{ section.settings.text_color }};
+  }
+    
+</style>
+
+
+{% for block in section.blocks %}
+{%if block.settings.announcement_text != blank %}
+<div class="mycls {% if block.settings.show_gradient%}bg-gradient{% else %} bg-solid {% endif %}">{{block.settings.announcement_text|upcase}}</div>
+{% endif %}
+{% endfor %}
 
 {% schema %}
   {
-    "name": "Custom Announcement",
+    "name": "Announcement Bar",
     "settings": [
-        {
-			"type":"text",
-            "id":"c_announcemet",
-            "label":"Announcement Text",
-            "default":"Wellcome to my store"
-        }
-	]
+			{
+              "type": "color",
+              "id": "text_color",
+              "label": "Announcement Text Color",
+              "default": "#ffffff"
+            },
+			{
+              "type": "color",
+              "id": "bg_solid",
+              "label": "Solid Background Color",
+              "default": "#000000"
+            },
+			{
+              "type": "color",
+              "id": "bg_gradient",
+              "label": "Gradient Text Color",
+              "default": "#ffffff"
+            },
+			{
+              "type": "color_background",
+              "id": "background",
+              "label": "Gradient Background",
+              "default": "linear-gradient(#ffffff, #000000)"
+            }
+		],
+		"blocks":[
+				{
+					"type":"announcement",
+					"name": "Announcement Bar",
+					"settings":[
+						{
+                          "type": "checkbox",
+                          "id": "show_gradient",
+                          "label": "Show Gradient Color Background",
+                          "default": false
+                        },
+						{
+                          "type": "text",
+                          "id": "announcement_text",
+                          "label": "Announce Bar Text",
+                          "default": "Welcome to store"
+                        }
+					]
+				}
+			]
   }
 {% endschema %}
+
